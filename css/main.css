@@ -1,0 +1,603 @@
+html{
+    overflow-y: scroll;
+}
+/* Rosa/lila: #b8457b , Grå: #262626 , Länkar i brödtext: #1e1e1e */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    font-size: 1em;
+    height: 100%;
+    background-color: #f7f7f7;
+    color: #333;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+h1{
+    color: #b8457b;
+    font-size: 2em;
+    line-height: 1em;
+}
+h2{
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h3{
+    color: #b8457b;
+    font-size: 1.4em;
+    line-height: 0em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+}
+.h3black{
+    color: #262626;
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: 100;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+/* Body text */
+p{
+    color: #333;
+}
+.pError{
+    color: red;
+}
+.pSuccess{
+    color: green;
+}
+a{
+    color: #1e1e1e;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+a:hover{
+    color: #b8457b;
+}
+.aLink{
+    border-bottom: 1px solid #262626;
+}
+.aLink:hover{
+    border-bottom: 1px solid #b8457b;
+}
+p a{
+    color: #1e1e1e;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+}
+p a:hover{
+    color: #b8457b;
+    border-bottom: 2px solid #b8457b;
+}
+.aButtonUser{
+    color: #1e1e1e;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.aButtonUser:hover{
+    color: #b8457b;
+}
+/* .aButtonUser::before{
+    
+} */
+.aButton, .aDelete{
+    padding: 12px 16px;
+    background-color: #b8457b;
+    border: none;
+    color: #f7f7f7;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 2%;
+}
+.aButton:hover{
+    background-color: #1e1e1e;
+    transition: 0.3s;
+}
+.aDelete:hover{
+    background-color: red;
+    transition: 0.3s;
+}
+
+/* Form */
+.loginForm{
+    background-color: #f7f7f7;
+    padding: 2%;
+    width: 80%;
+    border: 2px solid #d1d1d1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.loginForm input[type=text], .loginForm input[type=password] {
+    width: 98%;
+}
+.loginForm [value='Förnamn Efternamn'], .loginForm [value='Example123@hotmail.com'] {
+    opacity: 0.7;
+    z-index: 1;
+}
+form{
+    background-color: #f7f7f7;
+    padding: 1%;
+    width: 80%;
+    border: 2px solid #d1d1d1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* Button */
+input[type=button], input[type=submit]{
+    padding: 12px 16px;
+    background-color: #b8457b;
+    border: none;
+    color: #f7f7f7;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+input[type=button]:hover, input[type=submit]:hover{
+    background-color: #1e1e1e;
+    cursor: pointer;
+}
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #b8457b;
+}
+input[type=text]:hover, input[type=text]:focus {
+    background-color: #d8def1;
+}
+textarea{
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    border: none;
+    border-bottom: 2px solid #b8457b;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: vertical;
+    overflow: hidden;
+}
+
+/* Container */
+#container{
+    /* min-height: 797px; */
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position:relative;
+}
+/* Header */
+#mainheader{
+    width: 99%;
+    height: 140px;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 1%;
+    padding-left: 0;
+    position: relative;
+    float: left;
+    z-index: 100;
+}
+.headerLogo{
+    height: 90px;
+    width: 200px;
+    float: left;
+    margin-left: 10%;
+    background: url("../img/logo.png") no-repeat;
+    background-size: 80%;
+}
+/* Menu */
+#mainmenu ul{
+    background-color: #b8457b;
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    padding-left: 10%;
+}
+    #mainmenu li{
+        float: left;
+        padding: 13px 16px;
+    }
+    #mainmenu li a{
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-size: 0.82em;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    #mainmenu li a:hover{
+        border-bottom: 2px solid #262626;
+    }
+
+/* Menu - Mobile & Tablet */
+/* Before click */
+.smallmenu {
+    float: left;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+}
+    /* Links */
+    .smallmenu a {
+        float: left;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-size: 1em;
+        display: none;
+    }
+    .smallmenu a:hover {
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+    /* Icon */
+    .smallmenu .icon {
+        float: left;
+        display: block;
+        text-align: left;
+        background-color: transparent;
+    }
+    .line1{
+        margin-top: 8px;
+    }
+    .line2, .line3{
+        margin-top:5px;
+    }
+    .line1, .line2, .line3 {
+        background-color:#f7f7f7;
+        width:21px;
+        height:3px;
+        display:block;
+        position:relative;
+        opacity:1.0;
+        border-radius:15%;
+        transition: all .3s;
+        opacity: 0.9;
+    }
+
+/* After click */
+.smallmenu.afterClick {
+    overflow: hidden;
+    height: 205px;
+    width: 100%;
+    background-color: #262626;
+    border-bottom: 2px solid #b8457b;
+    border-bottom-style: inset;
+    opacity: 1;
+    margin-top: 0px;
+}
+    /* Icon */
+    .smallmenu.afterClick a.icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        transform: rotate(90deg);
+    }
+    /* Links */
+    .smallmenu.afterClick a {
+        float: none;
+        display: block;
+        color: #fff;
+        text-align: left;
+    }
+    .smallmenu.afterClick a.active {
+        color: #000;
+    }
+    .smallmenu.afterClick a:hover {
+        color: #f7f7f7;
+        background-color: #b8457b;
+        opacity: 1;
+    }
+    .smallmenu.afterClick a.icon:hover {
+        color: #000;
+        background-color: transparent;
+    }
+.smallmenuLogin{
+    height: 35px;
+    float: right;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right:4%;
+    overflow: hidden;
+    color: #f7f7f7;
+}
+    .smallmenuLogin:hover{
+        opacity: 0.6;
+        color: #f7f7f7;
+    }
+    /* Small Logo */
+.logo2{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    padding: 0;
+    margin-top: 4px;
+    background: url(../img/logowhite.svg) no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    overflow: hidden;
+}
+    .logo2:hover{
+        opacity: 0.6;
+    }
+
+/* Holder */
+#contentHolder{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    background-color: #f7f7f7;
+    float: left;
+    margin-left: 10%;
+    box-shadow: 0px 1px 4px #888888;
+}
+/* leftcontent */
+#leftcontent{
+    background-color: #f7f7f7;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 11%;
+    width: 50%;
+    height: 100%;
+    min-height: 497px;
+    padding-bottom:50px;   /* Height of the footer */
+}
+#sidebar{
+    background-color: #f7f7f7;
+    float: left;
+    padding-left: 1%;
+    width: 35%;
+    height: 100%;
+    min-height: 497px;
+    padding-bottom:50px;   /* Height of the footer */
+}
+
+#postHolder{
+    position: relative;
+    background-color: transparent;
+    width: 98%;
+    padding: 1%;
+    max-height: 600px;
+    overflow-y:scroll;
+    box-shadow: 0px 2px 8px #888888;
+}
+#postDescription{
+    background-color: #b8457b;
+    color: #f7f7f7;
+    padding: 1%;
+    text-align: center;
+}
+#postDescription h4{
+    color: #f7f7f7;
+}
+
+.postList{
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 2px #888888;
+}
+.postBox{
+    width: 96%;
+    height: 100%;
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 2%;
+    padding-top: 0.1%;
+    margin-bottom: 2%;
+}
+.postBox::before{
+    position:absolute;
+    content:'';
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    background-image: -webkit-linear-gradient(top left, #f7f7f7 50%, #b8457b 50%);
+    background-image: linear-gradient(315deg, #f7f7f7 50%, #a53e6e 50%);
+}
+.postBox:after{
+    display:block;
+    position:absolute;
+    content: '';
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    background-image: -webkit-linear-gradient(top left, transparent 50%, #d6d6d6 50%);
+    background-image: linear-gradient(315deg, #d6d6d6 50%, transparent 50%);
+}
+
+/* Footer */
+#mainfooter{
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    clear: both;
+    height:200px; 
+    background-color: #262626;
+    color: #fff;
+    border-top: 4px solid #b8457b;
+    box-shadow: 0px 1px 4px #888888;
+}
+    .footerholder p{
+        color: #f7f7f7;
+        text-align: left;
+        float: left;
+    }
+.footerholder{
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+}
+.footerholder a{
+    color: #f7f7f7;
+    text-decoration: underline;
+}
+.footerlogo{
+    height: 100%;
+    width: 20%;
+    background: url(../img/logowhitepink.svg) no-repeat;
+    background-size: 100%;
+    float: right;
+}
+
+/* Media queries */
+@media only screen and (max-width: 630px) {
+    #contentHolder{
+        width: 100%;
+        margin-left: 0;
+        padding-top: 50px;
+    }
+    #leftcontent{
+        margin-right: 0;
+        width: 98%;
+        min-height: 0px;
+    }
+    #sidebar{
+        width: 98%;
+        min-height: 0px;
+    }
+    form{
+        width: 97%;
+    }
+    .loginForm{
+        width: 95%;
+    }
+    b{
+        word-break: break-all;
+    }
+    #mainheader h1{
+        display: none;
+    }
+    #mainheader{
+        background-color: #b8457b;
+        position: fixed;
+        top: 0;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #mainmenu ul{
+        display: none;
+    }
+    #mainfooter{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        height: 300px;
+    }
+    #mainfooter p{
+        text-align: center;
+        float: none;
+    }
+    .footerholder{
+        margin-left: 0;
+        width: 100%;
+    }
+    .headerLogo{
+        display: none;
+    }   
+    .footerlogo{
+        float: left;
+        height: 80%;
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+@media only screen and (min-width: 630px) and (max-width: 800px) {
+    #contentHolder{
+        width: 100%;
+        margin-left: 0;
+    }
+    #leftcontent{
+        margin-right: 0;
+        width: 98%;
+    }
+    #sidebar{
+        width: 98%;
+        min-height: 0px;
+    }
+    #mainmenu ul{
+        padding-left: 0;
+        width: 100%;
+    }
+    .loginForm{
+        width: 95%;
+    }
+    .headerLogo{
+        margin-left: 0;
+    }
+    h1{
+        margin-left: 0;
+    }
+    #mainfooter{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    #mainfooter p{
+        text-align: center;
+        float: none;
+    }
+    .footerholder{
+        margin-left: 1%;
+        width: 99%;
+    }
+    .footerlogo{
+        float: left;
+        height: 80%;
+        width: 20%;
+        margin-left: 40%;
+    }
+    .smallmenu{
+        display: none;
+    }
+    #smallmenuLogin{
+        display: none;
+    }
+    .logo2{
+        display: none;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .smallmenu{
+        display: none;
+    }
+    #smallmenuLogin{
+        display: none;
+    }
+    .logo2{
+        display: none;
+    }
+}
