@@ -1,6 +1,8 @@
 # DT093G - Web Development II
 
-En bloggportal med inloggningssystem och CRUD-funktionalitet samt en resttjänst. 
-Webbplatsen är kodad på ett objektorienterat vis med PHP och jobbar mot en MySQL-databas. Resttjänsten konsumeras med JavaScript.
+Dynamic Websites with Object-Oriented Programming and Relational Databases.
 
-[__Rapport__](https://github.com/albinronnkvist/Course_DT093G_WebDevelopmentII/blob/master/DT093G_essay_sv.pdf)
+In this course, I developed CRUD applications and login systems using object-oriented PHP and MySQL. Additionally, I created RESTful services in PHP, which were consumed using AJAX techniques in JavaScript.
+The final project was a blog portal featuring user authentication, CRUD functionality, and a REST API. The website was built using object-oriented PHP, connected to a MySQL database, and the REST service was integrated with JavaScript for dynamic interactions.
+
+[Essay](https://github.com/albinronnkvist/Course_DT093G_WebDevelopmentII/blob/master/DT093G_essay_sv.pdf)
